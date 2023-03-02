@@ -1,0 +1,26 @@
+#include <Servo.h>
+Servo myservo;
+
+int pos = 55;
+
+void setup() {
+  // put your setup code here, to run once:
+  myservo.attach(9);
+  
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+  
+ {
+
+  myservo.write(55);
+  delay(8000);
+  for (pos = 55; pos >= 12; pos -= 1){
+    myservo.write(pos);
+    delay(1);
+  }
+  delay(200);
+
+  }
+}
